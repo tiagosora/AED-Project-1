@@ -1,2 +1,2 @@
 # AED-Project-1
-First Project - AED - 2021/22 - C
+First Project - AED - 2021/22 - C - Merkle-Hellman Cryptosystem
