@@ -116,14 +116,14 @@ int main(void){
     // ----- THE USER MAY COMMENT OR UNCOMMENT THE FOLLOWING LINES DEPENDING ON THE INTENDED METHOD ----- //
     // choice = 1; // Use the "brute force" method
     // choice = 2; // Use the "branch and bound" method
-    // choice = 3; // Use the "meet in the middle" method
+    choice = 3; // Use the "meet in the middle" method
     // -------------------------------------------------------------------------------------------------- //
     FILE *stderr;
     FILE *times_file;
-    stderr = fopen("Solution_000000.txt", "a"); 
-    if (choice == 1){times_file = fopen("Time_000000.txt", "a");}
-    if (choice == 2){times_file = fopen("Time2_000000.txt", "a");}
-    if (choice == 3){times_file = fopen("Time3_000000.txt", "a");}
+    stderr = fopen("Solution_104142.txt", "a"); 
+    if (choice == 1){times_file = fopen("Time_104142.txt", "a");}
+    if (choice == 2){times_file = fopen("Time2_104142.txt", "a");}
+    if (choice == 3){times_file = fopen("Time3_104142.txt", "a");}
     fprintf(stderr,"Program configuration:\n");
     fprintf(stderr,"  min_n ....... %d\n",min_n);
     fprintf(stderr,"  max_n ....... %d\n",max_n);
@@ -207,6 +207,7 @@ int main(void){
             free(b);
         }
         tempo = cpu_time() - tempo;
+        fprintf(times_file, "%15.17f\n", tempo);
         printf("Method %d : %d done in -> %17.15f seconds \n", choice, n, tempo);
     }
     return EXIT_SUCCESS;
